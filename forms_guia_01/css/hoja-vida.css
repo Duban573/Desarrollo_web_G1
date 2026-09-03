@@ -1,0 +1,65 @@
+/* ==============================
+   ESTILOS DE LA HOJA DE VIDA
+   ============================== */
+
+fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.helper-text {
+    margin-top: 0;
+    color: #64748b;
+}
+
+.exp-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 0.8rem;
+    align-items: start;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.remove-exp {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #b91c1c;
+    cursor: pointer;
+}
+
+.cv-preview {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-top: 2px solid #2563eb;
+}
+
+.cv-preview h3 {
+    margin-top: 0;
+}
+
+.cv-experience {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #f8fafc;
+    border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+    .exp-block {
+        grid-template-columns: 1fr;
+    }
+}

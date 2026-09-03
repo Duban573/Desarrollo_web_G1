@@ -1,0 +1,19 @@
+/* ==============================
+   ESTILOS DE LA ENCUESTA
+   ============================== */
+
+.form-card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.conditional-field {
+    padding: 1rem;
+    border-left: 4px solid #2563eb;
+    background: #eff6ff;
+    border-radius: 0 6px 6px 0;
+}
+
+.survey-summary {
+    margin-top: 1.5rem;
+}

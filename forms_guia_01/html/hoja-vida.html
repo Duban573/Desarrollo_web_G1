@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/hoja-vida.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Formularios Web</h1>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="../index.html">Login</a>
+            <a href="/html/registro.html">Registro</a>
+            <a class="active" href="/html/hoja-vida.html">Hoja de Vida</a>
+            <a href="/html/encuesta.html">Encuesta</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="card form-card">
+            <div class="card-header">
+                <h2>Hoja de Vida</h2>
+                <p>Agrega tu información personal y experiencia laboral.</p>
+            </div>
+
+            <form id="cvForm" novalidate>
+                <fieldset>
+                    <legend>1. Información Personal</legend>
+
+                    <div class="form-grid">
+                        <div>
+                            <label for="cvName">Nombre Completo</label>
+                            <input type="text" id="cvName" required>
+                            <span class="error-message" id="cvNameErr"></span>
+                        </div>
+
+                        <div>
+                            <label for="cvTitle">Título Profesional</label>
+                            <input type="text" id="cvTitle" required>
+                            <span class="error-message" id="cvTitleErr"></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Experiencia Laboral</legend>
+                    <p class="helper-text">Puedes agregar tantas experiencias como necesites.</p>
+
+                    <div id="experienceContainer"></div>
+
+                    <button type="button" id="addExpBtn" class="btn-secondary">+ Agregar Experiencia</button>
+                </fieldset>
+
+                <button type="submit" class="btn-primary">Generar Vista CV</button>
+            </form>
+
+            <div id="cvPreview" class="cv-preview hidden" aria-live="polite">
+                <h3>Vista previa de la Hoja de Vida</h3>
+                <div id="cvPreviewContent"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/hoja-vida.js"></script>
+</body>
+</html>

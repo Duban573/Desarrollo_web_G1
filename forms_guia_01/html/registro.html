@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Formularios Web</h1>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="../index.html">Login</a>
+            <a class="active" href="/html/registro.html">Registro</a>
+            <a href="/html/hoja-vida.html">Hoja de Vida</a>
+            <a href="/html/encuesta.html">Encuesta</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="card form-card">
+            <div class="card-header">
+                <h2>Registro de Usuario</h2>
+                <p>Completa los datos para crear una cuenta.</p>
+            </div>
+
+            <form id="regForm" class="form-grid" novalidate>
+                <div class="full-width">
+                    <label for="fullname">Nombre Completo</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Tu nombre completo" required>
+                    <span class="error-message" id="nameErr"></span>
+                </div>
+
+                <div>
+                    <label for="regEmail">Correo Electrónico</label>
+                    <input type="email" id="regEmail" name="email" placeholder="usuario@dominio.com" required>
+                    <span class="error-message" id="regEmailErr"></span>
+                </div>
+
+                <div>
+                    <label for="gender">Género</label>
+                    <select id="gender" name="gender">
+                        <option value="">Seleccione...</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="O">Otro</option>
+                    </select>
+                    <span class="error-message" id="genderErr"></span>
+                </div>
+
+                <div>
+                    <label for="regPassword">Contraseña</label>
+                    <input type="password" id="regPassword" name="password" minlength="6" placeholder="Mínimo 6 caracteres" required>
+                    <span class="error-message" id="regPasswordErr"></span>
+                </div>
+
+                <div>
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" placeholder="Repite la contraseña" required>
+                    <span class="error-message" id="confirmPasswordErr"></span>
+                </div>
+
+                <div class="full-width checkbox-group">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms">
+                        Acepto los Términos y Condiciones
+                    </label>
+                    <span class="error-message" id="termsErr"></span>
+                </div>
+
+                <button type="submit" class="full-width btn-success">Registrar Cuenta</button>
+            </form>
+
+            <div id="regSummary" class="success-card hidden" aria-live="polite">
+                <h3>¡Cuenta Creada con Éxito!</h3>
+                <p id="summaryText"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/registro.js"></script>
+</body>
+</html>

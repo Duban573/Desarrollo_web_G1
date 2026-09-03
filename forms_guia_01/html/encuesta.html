@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Dinámica</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/encuesta.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Formularios Web Interactivos</h1>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="../index.html">Login</a>
+            <a href="/html/registro.html">Registro</a>
+            <a href="/html/hoja-vida.html">Hoja de Vida</a>
+            <a class="active" href="/html/encuesta.html">Encuesta</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="card form-card">
+            <div class="card-header">
+                <h2>Encuesta Dinámica</h2>
+                <p>Selecciona tus preferencias y responde las preguntas.</p>
+            </div>
+
+            <form id="surveyForm" novalidate>
+                <div class="form-group">
+                    <label for="academicLevel">Nivel Académico</label>
+                    <select id="academicLevel" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Bachillerato">Bachillerato</option>
+                        <option value="Técnico">Técnico</option>
+                        <option value="Tecnólogo">Tecnólogo</option>
+                        <option value="Universitario">Universitario</option>
+                        <option value="Posgrado">Posgrado</option>
+                    </select>
+                    <span class="error-message" id="academicErr"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="languageSelect">Lenguaje Preferido</label>
+                    <select id="languageSelect" required>
+                        <option value="">Seleccione...</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="C#">C#</option>
+                    </select>
+                    <span class="error-message" id="languageErr"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reasonSelect">Motivo de tu elección</label>
+                    <select id="reasonSelect" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Facilidad de aprendizaje">Facilidad de aprendizaje</option>
+                        <option value="Uso académico">Uso académico</option>
+                        <option value="Proyectos personales">Proyectos personales</option>
+                        <option value="Versatilidad">Versatilidad</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <span class="error-message" id="reasonErr"></span>
+                </div>
+
+                <div id="otherGroup" class="form-group conditional-field hidden">
+                    <label for="otherReason">Especifica el motivo</label>
+                    <textarea id="otherReason" rows="4" placeholder="Escribe tu respuesta..."></textarea>
+                    <span class="error-message" id="otherErr"></span>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar Encuesta</button>
+            </form>
+
+            <div id="surveySummary" class="success-card hidden" aria-live="polite">
+                <h3>Resumen de Respuestas Enviadas</h3>
+                <p><strong>Nivel Académico:</strong> <span id="summaryAcademic"></span></p>
+                <p><strong>Lenguaje Preferido:</strong> <span id="summaryLanguage"></span></p>
+                <p><strong>Motivo:</strong> <span id="summaryReason"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/encuesta.js"></script>
+</body>
+</html>
