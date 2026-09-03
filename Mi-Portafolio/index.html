@@ -1,71 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Mi Portafolio</h1>
-        <p>Estudiante de Ingeniería Informática</p>
-    </header>
+        <nav class="navbar">
+            <h1 class="logo">Mi Portafolio</h1>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
 
-        <section id="inicio">
-            <h2>Bienvenido</h2>
-            <p>Bienvenido a mi portafolio personal.</p>
+        <!-- INICIO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="greeting">Hola, soy</p>
+
+                <h2>Duban Gutierrez</h2>
+
+                <p>
+                    Estudiante de Ingeniería Informática interesado
+                    en el desarrollo de software y la tecnología.
+                </p>
+
+                <a href="#proyectos" class="button">Ver mis proyectos</a>
+            </div>
         </section>
 
-        <section id="sobre-mi">
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="section">
             <h2>Sobre mí</h2>
+
             <p>
-                Soy estudiante de Ingeniería Informática interesado
-                en el desarrollo de software y la tecnología.
+                Soy estudiante de Ingeniería Informática. Me interesa
+                aprender sobre programación, desarrollo web y nuevas
+                tecnologías.
+            </p>
+
+            <p>
+                Actualmente estoy desarrollando mis conocimientos en
+                diferentes lenguajes y herramientas de programación.
             </p>
         </section>
 
-        <section id="proyectos">
-            <h2>Mis proyectos</h2>
-
-            <article>
-                <h3>Proyecto 1</h3>
-                <p>Descripción de mi primer proyecto.</p>
-            </article>
-
-            <article>
-                <h3>Proyecto 2</h3>
-                <p>Descripción de mi segundo proyecto.</p>
-            </article>
-        </section>
-
-        <section id="habilidades">
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="section">
             <h2>Mis habilidades</h2>
 
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-            </ul>
+            <div class="skills">
+
+                <div class="skill">
+                    <h3>HTML</h3>
+                    <p>Estructuración de páginas web.</p>
+                </div>
+
+                <div class="skill">
+                    <h3>CSS</h3>
+                    <p>Diseño y estilos para páginas web.</p>
+                </div>
+
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <p>Programación e interacción en páginas web.</p>
+                </div>
+
+                <div class="skill">
+                    <h3>Python</h3>
+                    <p>Programación y desarrollo de aplicaciones.</p>
+                </div>
+
+            </div>
         </section>
 
-        <section id="contacto">
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="section">
+            <h2>Mis proyectos</h2>
+
+            <div class="projects">
+
+                <article class="project">
+                    <h3>Proyecto 1</h3>
+
+                    <p>
+                        Descripción de mi primer proyecto.
+                    </p>
+
+                    <a href="#" class="project-link">Ver proyecto</a>
+                </article>
+
+                <article class="project">
+                    <h3>Proyecto 2</h3>
+
+                    <p>
+                        Descripción de mi segundo proyecto.
+                    </p>
+
+                    <a href="#" class="project-link">Ver proyecto</a>
+                </article>
+
+                <article class="project">
+                    <h3>Proyecto 3</h3>
+
+                    <p>
+                        Descripción de mi tercer proyecto.
+                    </p>
+
+                    <a href="#" class="project-link">Ver proyecto</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="section contact">
             <h2>Contacto</h2>
-            <p>Correo: dubangutierrez1120@gmail.com</p>
+
+            <p>
+                ¿Quieres ponerte en contacto conmigo?
+            </p>
+
+            <a href="mailto:dubangutierrez1120@gmail.com" class="button">
+                Enviar correo
+            </a>
         </section>
 
     </main>
@@ -75,4 +146,5 @@
     </footer>
 
 </body>
+
 </html>
