@@ -1,0 +1,32 @@
+/* ==============================
+   ESTILOS DEL LOGIN
+   ============================== */
+
+.login-card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 5.5rem;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.5rem;
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.toggle-password:hover {
+    color: #1d4ed8;
+}
